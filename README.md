@@ -1,5 +1,7 @@
 Harel Corentin
 
+# Etape 2
+
 # Requête de lecture
 1. db.books.find().toArray();
 2. db.books.find({ "_id": 2 }).toArray();
@@ -56,3 +58,6 @@ db.books.deleteOne({ _id: 2 });
 library> db.books.find({ "_id": 2 }).toArray();
 []
 
+# Etape 3
+
+j'ai crée une application avec NodeJS Express JS simple permettant de se connecter à mongodb et à la db librairie avec deux trois fonctions permettant de faire des requêtes sur la db librairie

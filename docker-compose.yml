@@ -33,6 +33,18 @@ services:
     depends_on:
       db:
         condition: service_healthy
+  
+  app:
+    build: ./book-service/
+    container_name: app_container
+    networks:
+      - bk
+    environment:
+      MONGO_URI: mongodb://db:27017/library
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
 
 networks:
   bk:
